@@ -1,1 +1,7 @@
-# Doctor-Appointment
+## Doctor App
+
+Doctor App
+
+#### License
+
+MIT
