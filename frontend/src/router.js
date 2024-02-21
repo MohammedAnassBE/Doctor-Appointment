@@ -13,6 +13,22 @@ const routes = [
     path: '/account/login',
     component: () => import('@/pages/Login.vue'),
   },
+  {
+    name: 'NewSlot',
+    path: '/NewSlot/:periodTime',
+    component: () => import('@/pages/NewSlot.vue'),
+    props: route => ({
+      periodTime: route.params.periodTime,
+      sendDate: route.query.sendDate,
+      sendDoctor: route.query.sendDoctor,
+    })
+  },
+  {
+    name: 'AppointmentsPage',
+    path: '/todayAppointments/:todayDate',
+    component: () => import('@/pages/AppointmentsPage.vue'),
+    props: true,
+  },
 ]
 
 let router = createRouter({
